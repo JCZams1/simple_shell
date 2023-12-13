@@ -2,9 +2,9 @@
 
 /**
  * hsh - main shell loop
- * 
+ *
  * @info: the parameter & return info struct
- * 
+ *
  * @av: the argument vector from main()
  *
  * Return: 0 on success, 1 on error, or error code
@@ -47,7 +47,7 @@ int hsh(info_t *info, char **av)
 
 /**
  * find_builtin - finds a builtin command
- * 
+ *
  * @info: the parameter & return info struct
  *
  * Return: -1 if builtin not found,
@@ -82,7 +82,7 @@ int find_builtin(info_t *info)
 
 /**
  * find_cmd - finds a command in PATH
- * 
+ *
  * @info: the parameter & return info struct
  *
  * Return: void
@@ -124,7 +124,7 @@ void find_cmd(info_t *info)
 
 /**
  * fork_cmd - forks a an exec thread to run cmd
- * 
+ *
  * @info: the parameter & return info struct
  *
  * Return: void
@@ -132,15 +132,15 @@ void find_cmd(info_t *info)
 
 /**
  * Fork system call is used for creating a new process, which is called child process,
- * 
+ *
  * which runs concurrently with the process that makes the fork() call (parent process).
- * 
+ *
  * After a new child process is created,
- * 
+ *
  * both processes will execute the next instruction following the fork() system call.
- * 
+ *
  * A child process uses the same pc(program counter),
- * 
+ *
  * same CPU registers, same open files which use in the parent process.
  */
 void fork_cmd(info_t *info)
